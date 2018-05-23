@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Battleships Game</title>
+    <meta charset="utf-8"/>
+    <!-- Bootstrap css sources -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <h1>Battleships</h1>
+
+    <!-- Battleship Board -->
+    <div class="container">
+      <div class="column">
+        <h2>Player 1</h2>
+        <div id="player1" class="player-1-table"> </div>
+      </div>
+      <div class="column">
+        <h2>Player 2</h2>
+        <div id="player2" class="player-2-table"> </div>
+      </div>
+    </div>
+
+    <!-- Buttons for resetting and starting the game -->
+    <div>
+      <div id="resetButton" class="btn btn-danger">Restart Game</div>
+      <div id="startButton" class="btn btn-primary">Start Game</div>
+    <div>
+
+    <!-- Battleship Modal -->
+    <div class="modal fade" id="battleship-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="battleship-modal-title">Shot made</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="battleship-modal-body">close</div>
+          <div class="modal-footer">
+            <button type="button" id="battleship-modal-button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Battleship Winner Modal. Includes a table for statistics of the game -->
+    <div class="modal fade" id="battleship-win-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="battleship-win-modal-title">Shot made</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="battleship-win-modal-body">close</div>
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Statistics</th>
+                  <th>Player 1</th>
+                  <th>Player 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Shots Fired</td>
+                  <td id="battleship-win-p1-num-shots">0</td>
+                  <td id="battleship-win-p2-num-shots">0</td>
+                </tr>
+                <tr>
+                  <td>Ships Sank</td>
+                  <td id="battleship-win-p1-ships-sank">0</td>
+                  <td id="battleship-win-p2-ships-sank">0</td>
+                </tr>
+              </tbody>
+            </table>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Look at Board</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="restart()">Restart Game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap javascript sources -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+  <!-- Battleship Resources and Javascript files -->
+  <link rel="stylesheet" href="../css/styles.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/cell-styles.css" type="text/css"/>
+
+  <script src="../js/board.js"> </script>
+  <script src="../js/ships/shipLine.js"> </script>
+  <script src="../js/ships/shipBox.js"> </script>
+  <script src="../js/ships/shipL.js"> </script>
+  <script src="../js/battleship.js"> </script>
+  <script src="../js/game.js"> </script>
+
+</html>

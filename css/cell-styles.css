@@ -1,0 +1,43 @@
+.hit {
+  font-size: 1em;
+  background-color: red;
+}
+
+.miss {
+  font-size: 1em;
+  background-color: grey;
+}
+
+.invalid {
+  font-size: 1em;
+  background-color: grey;
+}
+
+.shot {
+  font-size: 1em;
+  background-color: silver
+}
+
+.ship {
+  font-size: 1em;
+  background-color: aqua;
+}
+
+.empty {
+  font-size: 1em;
+  background-color: white;
+}
+
+.cell-visible {
+  color: black;
+  border-collapse: collapse;
+  border: 3px solid black;
+  height: 100%;
+}
+
+.cell-invisible {
+  color: silver;
+  border-collapse: collapse;
+  border: 3px solid silver;
+  height: 100%;
+}
